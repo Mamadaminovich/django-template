@@ -1,0 +1,19 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <body>
+    {%for name, value in nested.items%}
+    <div style="display: flex; align-items: center;">
+      <h1>{{name}}</h1>
+      {%for son in value%}
+      <h3 style="padding: 6px;">{{son}}</h3>
+      {%endfor%}
+    </div>
+    {%endfor%}
+  </body>
+</html>
